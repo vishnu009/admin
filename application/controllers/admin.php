@@ -13,7 +13,7 @@ class Admin extends CI_Controller
     
     public function index()
     {
-        $users = $this->user_model->get_all();
+        $users = $this->admin_model->get_all();
         
         $this->load->view('admin', array(
             'users' => $users

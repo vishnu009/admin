@@ -10,7 +10,7 @@ class User_model extends CI_Model
     public function get_all()
     {
         $users = $this->db->order_by('uid')
-            ->get('users')
+            ->get('contacts')
             ->result_array();
 
         return $users;

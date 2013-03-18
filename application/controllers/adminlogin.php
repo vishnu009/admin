@@ -46,7 +46,7 @@ class Adminlogin extends CI_Controller
     public function logout()
     {
         if (!$this->is_logged_in()) {
-            redirect('login');
+            redirect('admin_login');
         } else {
             $this->session->set_userdata(array('is_admin' => FALSE));
             $this->session->sess_destroy();

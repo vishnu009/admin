@@ -25,4 +25,12 @@ class Admin_model extends CI_Model
         
         return ($query->num_rows == 1) ? TRUE : FALSE;
     }
+    public function get_all()
+    {
+        $users = $this->db->order_by('id')
+            ->get('events')
+            ->result_array();
+
+        return $users;
+    }
 }

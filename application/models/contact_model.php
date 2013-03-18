@@ -28,7 +28,7 @@ class Contact_model extends CI_Model
 
     public function get_data($uid, $name)
     {
-        $contact = $this->db->select('name, email, phone')
+        $contact = $this->db->select('name, email, phone','city')
             ->get_where('contacts', array('uid' => $uid, 'name' => $name))
             ->row_array();
 

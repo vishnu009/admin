@@ -3,25 +3,43 @@
 <div class="container">
 <div class="content" style="display:none">
   <div class="page-header">
-    <h2>Your Users</h2>
+    <h2>Registered Users</h2>
   </div>
   <div class="row">
-    <div class="span9 offset1">
+    <div class="span9 ">
       <table class="table table-striped table-bordered tablesorter" id="tcontacts">
         <thead>
           <tr>
             <th><i class="icon-tags"></i> ID</th>
-            <th><i class="icon-envelope"></i> Email</th>
-            <th><i class="icon-list"></i> Contacts</th>
-          </tr>
+            <th>Name </th>
+            <th> Surname</th>
+            <th>Gender</th>
+            <th></i> DOB</th>
+            <th><i class="icon-envelope"></i> Email </th>
+            <th> yoga </th>
+            <th> Do yoga </th>
+            <th>Other Details</th>
+            <th></i> Medi Details </th>
+            <th> Surgery Details </th>
+            <th> Health conditons </th>
+         </tr>
         </thead>
         <tbody>
         <? foreach($users as $user): ?>
           <tr>
-            <td><?=$user['uid']; ?></td>
+            <td><?=$user['id']; ?></td>
+            <td><?=$user['firstname']; ?></td>
+            <td><?=$user['surname']; ?></td>
+            <td><?=$user['gender']; ?></td>
+            <td><?=$user['dob']; ?></td>
             <td><?=$user['email']; ?></td>
-            <td><?=$user['contacts']; ?></td>
-          </tr>
+            <td><?=$user['yoga']; ?></td>
+            <td><?=$user['pra_yoga']; ?></td>
+            <td><?=$user['other_health']; ?></td>
+            <td><?=$user['medical_details']; ?></td>
+            <td><?=$user['surgery_details']; ?></td>
+            <td><?=$user['health_condtions']; ?></td>
+         </tr>
           <? endforeach; ?>
         </tbody>
       </table>
